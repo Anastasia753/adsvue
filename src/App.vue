@@ -10,7 +10,7 @@ const logout = async () => {
   if (confirm("Вы уверены, что хотите выйти?")) {
     localStorage.removeItem('token');
     localStorage.removeItem('email');
-    await fetch("https://adsapi/api/logout", { method: "POST" });
+    await fetch("http://127.0.0.1:8000/api/logout", { method: "POST" });
     router.push('/login')
   }
 };

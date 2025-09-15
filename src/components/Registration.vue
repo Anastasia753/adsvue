@@ -19,7 +19,7 @@ const register = async () => {
       password: data.value.password,
     }
 
-    const response = await fetch('https://adsapi/api/register', {
+    const response = await fetch('http://127.0.0.1:8000/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const register = async () => {
     <h2>Регистрация</h2>
     <div>
       <label for="email">
-        <input type="text" name="email" v-model="data.email" :class="{'is-invalid': errors.email}">
+        <input type="email" name="email" v-model="data.email" :class="{'is-invalid': errors.email}">
       </label>
 
       <div v-if="errors.email">
@@ -56,7 +56,7 @@ const register = async () => {
 
     <div>
       <label for="password">
-        <input type="text" name="password" v-model="data.password" :class="{'is-invalid': errors.password}">
+        <input type="password" name="password" v-model="data.password" :class="{'is-invalid': errors.password}">
       </label>
 
       <div v-if="errors.password">
