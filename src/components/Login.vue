@@ -33,6 +33,7 @@ const login = async () => {
     }
   } catch (error) {
     console.log("Ошибка при входе: ", error)
+    console.log(error)
   }
 }
 </script>
